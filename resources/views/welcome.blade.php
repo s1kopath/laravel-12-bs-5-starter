@@ -17,7 +17,8 @@
                         <table class="table align-items-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name
+                                    </th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                         Position</th>
                                     <th
@@ -105,6 +106,14 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <button type="button" class="btn bg-gradient-dark mb-0" onclick="loadModal('{{ route('load-modal') }}')">
+                <i class="material-symbols-rounded text-sm">add</i>&nbsp;&nbsp;Add New
+            </button>
         </div>
     </div>
 @endsection

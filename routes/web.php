@@ -33,3 +33,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
 Route::get('test', function () {
     return view('welcome');
 })->name('test');
+
+Route::get('load-modal', function () {
+    return view('load-modal');
+})->name('load-modal');

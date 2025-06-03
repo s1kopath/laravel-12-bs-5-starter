@@ -24,28 +24,24 @@
     @stack('styles')
 </head>
 
-<body class="@yield('body-class', 'bg-gray-200')">
+<body>
     @yield('navbar')
 
     <main class="main-content mt-0">
         @yield('content')
     </main>
 
+    <!-- jQuery -->
+    <script src="{{ asset('assets/js/plugins/jquery.min.js') }}"></script>
+
+    @include('layouts.partials.simple-toast')
+
     <!--   Core JS Files   -->
     <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
-    <script>
-        var win = navigator.platform.indexOf('Win') > -1;
-        if (win && document.querySelector('#sidenav-scrollbar')) {
-            var options = {
-                damping: '0.5'
-            }
-            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-        }
-    </script>
-    <script src="{{ asset('assets/js/material-dashboard.min.js') }}?v=3.2.0"></script>
+    <script src="{{ asset('assets/js/material-dashboard.min.js') }}"></script>
     @stack('scripts')
 </body>
 
