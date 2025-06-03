@@ -2,7 +2,7 @@
     <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-dark opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand px-4 py-3 m-0" href="{{ route('dashboard') }}">
-            <img src="{{ asset('material-dashboard-master/assets/img/logo-ct-dark.png') }}" class="navbar-brand-img" width="26" height="26" alt="main_logo">
+            <img src="{{ asset('assets/img/logo-ct-dark.png') }}" class="navbar-brand-img" width="26" height="26" alt="main_logo">
             <span class="ms-1 text-sm text-dark">{{ config('app.name') }}</span>
         </a>
     </div>
@@ -17,12 +17,10 @@
                     <span class="nav-link-text ms-1">Dashboard</span>
                 </a>
             </li>
-            <!-- Add more menu items here -->
-
             <li class="nav-item">
-                <a class="nav-link text-dark" href="{{ route('logout') }}">
-                    <i class="material-symbols-rounded opacity-5">logout</i>
-                    <span class="nav-link-text ms-1">Logout</span>
+                <a class="nav-link {{ request()->routeIs('test') ? 'active bg-gradient-dark text-white' : 'text-dark' }}" href="{{ route('test') }}">
+                    <i class="material-symbols-rounded opacity-5">test</i>
+                    <span class="nav-link-text ms-1"></span>
                 </a>
             </li>
         </ul>

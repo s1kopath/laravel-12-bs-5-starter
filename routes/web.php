@@ -29,3 +29,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
+
+Route::get('test', function () {
+    return view('welcome');
+})->name('test');
