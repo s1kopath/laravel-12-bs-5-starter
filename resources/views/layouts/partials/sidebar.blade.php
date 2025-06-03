@@ -32,16 +32,6 @@
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0">
         <div class="mx-3">
-            <a href="javascript:;">
-                <div class="text-center">
-                    <img src="{{ asset('assets/img/team-2.jpg') }}" alt="{{ Auth::user()->name }}"
-                        class="rounded-circle" width="50" height="50">
-                    <br>
-                    <small class="text-dark mb-0">{{ Auth::user()->name }}</small>
-                    <br>
-                    <small class="text-muted text-sm">{{ Auth::user()->email }}</small>
-                </div>
-            </a>
             <a class="btn btn-outline-dark mt-4 w-100" href="{{ route('logout') }}" type="button">Logout</a>
         </div>
     </div>
