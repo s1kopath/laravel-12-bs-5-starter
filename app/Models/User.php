@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\CanResetPassword;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -10,7 +11,7 @@ use Illuminate\Auth\Passwords\CanResetPassword as CanResetPasswordTrait;
 
 class User extends Authenticatable implements CanResetPassword
 {
-    use Notifiable;
+    use Notifiable, HasApiTokens;
     use CanResetPasswordTrait;
 
     /** @use HasFactory<\Database\Factories\UserFactory> */
@@ -24,7 +25,11 @@ class User extends Authenticatable implements CanResetPassword
     protected $fillable = [
         'name',
         'email',
+        'phone',
+        'profile_photo_url',
+        'email_verified_at',
         'password',
+        'is_active',
         'is_admin',
     ];
 
@@ -49,5 +54,20 @@ class User extends Authenticatable implements CanResetPassword
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function scopeActive()
+    {
+        return $this->where('is_active', true);
+    }
+
+    public function scopeInactive()
+    {
+        return $this->where('is_active', false);
+    }
+
+    public function scopeAdmin()
+    {
+        return $this->where('is_admin', true);
     }
 }

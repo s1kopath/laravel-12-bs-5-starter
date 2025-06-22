@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Auth\LoginController;
+use App\Http\Controllers\Admin\Auth\RegisterController;
+use App\Http\Controllers\Admin\Auth\ResetPasswordController;
+use App\Http\Controllers\Admin\Auth\ForgotPasswordController;
+use App\Http\Controllers\Admin\UserController;
 
 // Authentication Routes
 Route::middleware('guest')->group(function () {
@@ -26,8 +27,11 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 // Protected Routes
 Route::middleware([AdminMiddleware::class])->group(function () {
+    // Dashboard
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // users
+    Route::resource('users', UserController::class);
 });
 
 Route::get('test', function () {

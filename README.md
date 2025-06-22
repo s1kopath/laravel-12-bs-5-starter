@@ -6,5 +6,6 @@
 4. Run `php artisan migrate` to migrate the database.
 5. Run `npm install` to install the required JavaScript dependencies.
 6. Run `npm run dev` to compile the assets.
+7. Run `php artisan passport:client --personal && php artisan passport:keys --force
 
-7. Open [https://demos.creative-tim.com/material-dashboard/pages/dashboard.html](https://demos.creative-tim.com/material-dashboard/pages/dashboard.html) in your browser to see the html template in action.
+8. Open [https://demos.creative-tim.com/material-dashboard/pages/dashboard.html](https://demos.creative-tim.com/material-dashboard/pages/dashboard.html) in your browser to see the html template in action.

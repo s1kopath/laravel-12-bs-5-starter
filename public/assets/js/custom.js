@@ -32,14 +32,20 @@ function loadModal(url, size = "default") {
             .find(".select2")
             .each(function () {
                 if (!$(this).hasClass("select2-container")) {
-                    $(this).select2();
+                    $(this).select2({
+                        dropdownParent: $("#show-modal"),
+                        width: "100%",
+                    });
                 }
             });
 
         $(this)
             .find(".select2-image")
             .each(function () {
-                $(this).select2();
+                $(this).select2({
+                    dropdownParent: $("#show-modal"),
+                    width: "100%",
+                });
             });
     });
 }

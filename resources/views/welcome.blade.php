@@ -7,7 +7,7 @@
         <div class="col-12">
             <div class="card my-4">
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                    <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3">
+                    <div class="bg-gradient-dark bg-brand shadow-dark border-radius-lg pt-4 pb-3">
                         <h6 class="text-white text-capitalize ps-3">Test Content</h6>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
         <div class="col-12">
             <div class="card my-4">
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                    <div class="bg-gradient-dark shadow-dark border-radius-lg pt-4 pb-3">
+                    <div class="bg-gradient-dark bg-brand shadow-dark border-radius-lg pt-4 pb-3">
                         <h6 class="text-white text-capitalize ps-3">Test Form</h6>
                     </div>
                 </div>
@@ -100,8 +100,16 @@
                                 {{ old('remember') ? 'checked' : '' }}>
                             <label class="form-check-label mb-0 ms-3" for="remember">Remember me</label>
                         </div>
+
+                        <div class="mb-1">
+                            <label for="is_active" class="form-label">Status</label>
+                            <select class="form-select select2 border rounded-3" id="is_active" name="is_active" required>
+                                <option value="1">Active</option>
+                                <option value="0">Inactive</option>
+                            </select>
+                        </div>
                         <div class="text-center">
-                            <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign in</button>
+                            <button type="submit" class="btn bg-gradient-dark bg-brand w-100 my-4 mb-2">Sign in</button>
                         </div>
                     </form>
                 </div>
@@ -111,9 +119,44 @@
 
     <div class="card">
         <div class="card-body">
-            <button type="button" class="btn bg-gradient-dark mb-0" onclick="loadModal('{{ route('load-modal') }}')">
+            <button type="button" class="btn bg-gradient-dark bg-brand mb-0"
+                onclick="loadModal('{{ route('load-modal') }}')">
                 <i class="material-symbols-rounded text-sm">add</i>&nbsp;&nbsp;Add New
             </button>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch Modal
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="input-group input-group-outline mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="input-group input-group-outline my-3">
+                            <label class="form-label">Select</label>
+                            <select class="form-select select2 border rounded-3">
+                                <option value="1">Select 1</option>
+                                <option value="2">Select 2</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn bg-gradient-dark bg-brand" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn bg-gradient-dark bg-brand">Save changes</button>
+                </div>
+            </div>
         </div>
     </div>
 @endsection

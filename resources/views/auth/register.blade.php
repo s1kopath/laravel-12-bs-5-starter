@@ -20,7 +20,7 @@
                     <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column ms-auto me-auto ms-lg-auto me-lg-5">
                         <div class="card card-plain">
                             <div class="card-header">
-                                <h4 class="font-weight-bolder">Sign Up</h4>
+                                <h4 class="font-weight-bolder text-brand">Sign Up</h4>
                                 <p class="mb-0">Enter your email and password to register</p>
                             </div>
                             <div class="card-body">
@@ -66,13 +66,17 @@
                                     </div>
                                     <div class="text-center">
                                         <button type="submit"
-                                            class="btn btn-lg bg-gradient-dark btn-lg w-100 mt-4 mb-0">Sign Up</button>
+                                            class="btn btn-lg bg-gradient-dark bg-brand btn-lg w-100 mt-4 mb-0">
+                                            Sign Up
+                                        </button>
                                     </div>
                                 </form>
                                 <p class="mt-4 text-sm text-center">
                                     Already have an account?
-                                    <a href="{{ route('login') }}" class="text-primary text-gradient font-weight-bold">Sign
-                                        in</a>
+                                    <a href="{{ route('login') }}"
+                                        class="text-primary bg-brand-secondary text-gradient font-weight-bold">
+                                        Sign in
+                                    </a>
                                 </p>
                             </div>
                         </div>

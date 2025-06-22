@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -17,9 +17,6 @@
     <link href="{{ asset('assets/css/nucleo-icons.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/nucleo-svg.css') }}" rel="stylesheet" />
 
-    <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-
     <!-- Material Icons -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -30,6 +27,12 @@
     <!-- datatable css -->
     <link rel="stylesheet" href="{{ asset('assets/css/datatable/datatable.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/datatable/buttons.dataTables.min.css') }}">
+
+    <!-- select2 css -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 
     <!-- optional css -->
     @stack('styles')
@@ -75,6 +78,10 @@
     <script type="text/javascript" src="{{ asset('assets/js/plugins/datatable/buttons.print.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/plugins/datatable/buttons.colVis.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/plugins/datatable/buttons.colVis.min.js') }}"></script>
+
+    <!-- select2 js -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="{{ asset('assets/js/plugins/select2.init.js') }}"></script>
 
     <!--custom setup-->
     <script src="{{ asset('assets/js/custom.js') }}"></script>

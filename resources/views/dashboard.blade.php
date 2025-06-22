@@ -6,7 +6,7 @@
     <div class="p-3">
         <div class="row">
             <div class="ms-3">
-                <h3 class="mb-0 h4 font-weight-bolder">Dashboard</h3>
+                <h3 class="mb-0 h4 font-weight-bolder text-brand">Dashboard</h3>
                 <p class="mb-4">
                     Check the sales, value and bounce rate by country.
                 </p>
@@ -20,7 +20,7 @@
                                 <h4 class="mb-0">$53k</h4>
                             </div>
                             <div
-                                class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                class="icon icon-md icon-shape bg-gradient-dark bg-brand shadow-dark shadow text-center border-radius-lg">
                                 <i class="material-symbols-rounded opacity-10">weekend</i>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                                 <h4 class="mb-0">2300</h4>
                             </div>
                             <div
-                                class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                class="icon icon-md icon-shape bg-gradient-dark bg-brand shadow-dark shadow text-center border-radius-lg">
                                 <i class="material-symbols-rounded opacity-10">person</i>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
                                 <h4 class="mb-0">3,462</h4>
                             </div>
                             <div
-                                class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                class="icon icon-md icon-shape bg-gradient-dark bg-brand shadow-dark shadow text-center border-radius-lg">
                                 <i class="material-symbols-rounded opacity-10">leaderboard</i>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                 <h4 class="mb-0">$103,430</h4>
                             </div>
                             <div
-                                class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                class="icon icon-md icon-shape bg-gradient-dark bg-brand shadow-dark shadow text-center border-radius-lg">
                                 <i class="material-symbols-rounded opacity-10">weekend</i>
                             </div>
                         </div>
