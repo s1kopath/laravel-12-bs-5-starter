@@ -14,6 +14,6 @@ class AdminMiddleware
             return $next($request);
         }
         Auth::logout();
-        return to_route('login')->with('error', 'Unauthorized access.');
+        return to_route('login');
     }
 }
