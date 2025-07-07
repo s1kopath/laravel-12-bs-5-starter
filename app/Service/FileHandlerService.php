@@ -105,17 +105,4 @@ class FileHandlerService
 
         return str_replace('/public/', '', "{$path}/{$fileName}");
     }
-
-    // function getFileUrl($path)
-    // {
-    //     if (preg_match('/^https?:\/\//', $path)) {
-    //         return $path;
-    //     }
-
-    //     if ($path == null || ! Storage::disk(env('FILESYSTEM_DISK'))->exists($path)) {
-    //         return asset('assets/placeholder.png');
-    //     }
-
-    //     return asset(Storage::url($path));
-    // }
 }
