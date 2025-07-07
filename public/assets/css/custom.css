@@ -177,7 +177,35 @@ div.dt-button-collection a.dt-button.active:not(.disabled) {
 }
 
 .paginate_button:hover {
-    box-shadow: 0 8px 14px -8px rgba(46, 139, 87, 0.3), 0 3px 18px 0 rgba(46, 139, 87, 0.1), 0 7px 8px -4px rgba(46, 139, 87, 0.18) !important;
+    box-shadow: 0 8px 14px -8px rgba(214, 51, 132, 0.3), 0 3px 18px 0 rgba(214, 51, 132, 0.1), 0 7px 8px -4px rgba(214, 51, 132, 0.18) !important;
 }
+
+.page-link.active,
+.active>.page-link {
+    color: #ffffff !important;
+}
+
+.page-link.disabled,
+.disabled>.page-link {
+    color: #6c757d !important;
+    background-color: #f1f1f1 !important;
+}
+
+.pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 /* end dt-button */
 
+/* file input */
+.form-control[type=file] {
+    border: 1px solid #d2d6da !important;
+    overflow: hidden !important;
+}
+
+.form-control[type=file]:hover {
+    background: #e5e5e5 !important;
+}
+
+/* end file input */

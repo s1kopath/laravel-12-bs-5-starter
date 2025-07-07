@@ -139,6 +139,14 @@
                 </div>
                 <div class="modal-body">
                     <form role="form">
+                        <div class="mb-3">
+                            <div class="text-center">
+                                <img src="{{ asset('assets/img/user-dummy-img.jpg') }}" class="img-fluid" width="100px"
+                                    id="img-id" alt="Driver Image">
+                            </div>
+                            <input type="file" name="profile_photo_path" class="form-control" id="profile_photo_path"
+                                onchange="previewThumbnail(this, 'img-id')">
+                        </div>
                         <div class="input-group input-group-outline mb-3">
                             <label class="form-label">Name</label>
                             <input type="text" class="form-control" required>
