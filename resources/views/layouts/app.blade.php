@@ -86,6 +86,35 @@
     <!--custom setup-->
     <script src="{{ asset('assets/js/custom.js') }}"></script>
 
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Hidden form for deleting -->
+    <form id="delete-form" method="POST" style="display: none;">
+        @csrf
+        @method('DELETE')
+    </form>
+
+    <!-- confirm and delete -->
+    <script>
+        function confirmAndDelete(url) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You can't undo this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'Cancel',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    const form = document.getElementById('delete-form');
+                    form.setAttribute('action', url);
+                    form.submit();
+                }
+            });
+        }
+    </script>
+
     {{-- prevent double submission --}}
     <script>
         document.addEventListener('DOMContentLoaded', () => {
