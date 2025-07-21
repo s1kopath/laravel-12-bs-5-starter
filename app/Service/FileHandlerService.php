@@ -13,7 +13,7 @@ class FileHandlerService
         return time() . "_" . uniqid() . "_" . $file->getClientOriginalName();
     }
 
-    private function ensureDirectoryExists($path, $disk = 'local')
+    private function ensureDirectoryExists($path, $disk = 'public')
     {
         if (!Storage::disk($disk)->exists($path)) {
             Storage::disk($disk)->makeDirectory($path, 0755, true);
@@ -42,7 +42,7 @@ class FileHandlerService
         $fileName = $this->generateFileName($file);
         $storagePath = storage_path("app{$path}/{$fileName}");
 
-        $this->ensureDirectoryExists($path, 'local');
+        $this->ensureDirectoryExists($path, 'public');
         $this->resizeAndSaveImage($file, $storagePath, $width, $height);
 
         return str_replace('/public', '', "{$path}/{$fileName}");
@@ -100,7 +100,7 @@ class FileHandlerService
     {
         $fileName = $this->generateFileName($file);
 
-        $this->ensureDirectoryExists($path, 'local');
+        $this->ensureDirectoryExists($path, 'public');
         $file->storeAs($path, $fileName);
 
         return str_replace('/public/', '', "{$path}/{$fileName}");
