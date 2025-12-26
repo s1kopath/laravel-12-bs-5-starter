@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Property Owners')
+@section('title', 'Users')
 
 @section('content')
     <div class="text-end">
