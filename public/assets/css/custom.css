@@ -117,11 +117,10 @@
 }
 
 .dataTables_scrollBody {
-    min-height: 50vh;
+    min-height: 50vh !important;
     overflow-y: hidden !important;
     overflow-x: auto !important;
     max-height: none !important;
-    min-height: auto !important;
 }
 
 .dataTables_scroll {
