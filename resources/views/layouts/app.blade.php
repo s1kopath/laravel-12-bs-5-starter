@@ -54,6 +54,8 @@
 
     @include('layouts.partials.modal')
 
+    @include('layouts.partials.image-preview-modal')
+
     <!-- Core JS Files -->
     <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
