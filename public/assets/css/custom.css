@@ -118,6 +118,15 @@
 
 .dataTables_scrollBody {
     min-height: 50vh;
+    overflow-y: hidden !important;
+    overflow-x: auto !important;
+    max-height: none !important;
+    min-height: auto !important;
+}
+
+.dataTables_scroll {
+    overflow-y: hidden !important;
+    overflow-x: auto !important;
 }
 
 
@@ -136,8 +145,8 @@ button.dt-button:hover,
 div.dt-button:hover,
 a.dt-button:hover,
 input.dt-button:hover {
-    background: #ffffff !important;
-    color: #ffffff !important;
+    /* background: #ffffff !important; */
+    /* color: #ffffff !important; */
     border-color: var(--brand-color-secondary) !important;
 }
 
@@ -177,7 +186,7 @@ div.dt-button-collection a.dt-button.active:not(.disabled) {
 }
 
 .paginate_button:hover {
-    box-shadow: 0 8px 14px -8px rgba(214, 51, 132, 0.3), 0 3px 18px 0 rgba(214, 51, 132, 0.1), 0 7px 8px -4px rgba(214, 51, 132, 0.18) !important;
+    box-shadow: 0 8px 14px -8px rgba(46, 139, 87, 0.3), 0 3px 18px 0 rgba(46, 139, 87, 0.1), 0 7px 8px -4px rgba(46, 139, 87, 0.18) !important;
 }
 
 .page-link.active,
@@ -208,4 +217,45 @@ div.dt-button-collection a.dt-button.active:not(.disabled) {
     background: #e5e5e5 !important;
 }
 
+.required::after {
+    content: " *";
+    color: red;
+}
+
 /* end file input */
+
+/* Circle background */
+.custom-close-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove default Bootstrap button styles */
+.custom-close-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Red close icon */
+.custom-close-btn i {
+    color: red;
+    font-size: 20px;
+    line-height: 1;
+}
+
+img[onclick] {
+    cursor: pointer;
+}
+
+.form-select:focus {
+    border: 1px solid #d2d6da !important;
+    box-shadow: none;
+}
