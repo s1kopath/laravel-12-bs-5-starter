@@ -49,3 +49,10 @@ function loadModal(url, size = "default") {
             });
     });
 }
+
+window.showImageModal = function (image) {
+    const src = image.getAttribute('src');
+    document.getElementById('modalImage').setAttribute('src', src);
+    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+    imageModal.show();
+}
