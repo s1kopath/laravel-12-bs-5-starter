@@ -34,6 +34,9 @@
     <!-- select2 css -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
+    <!-- summernote (lite version to avoid Bootstrap 4 JS dependency) -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
+
     <!-- custom css -->
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 
@@ -132,6 +135,9 @@
         });
     </script>
 
+    <!-- Summernote JS (lite build, no Bootstrap JS dependency) -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.js"></script>
+    
     <!--    Optional JS    -->
     @stack('scripts')
 </body>

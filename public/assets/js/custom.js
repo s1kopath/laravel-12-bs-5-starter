@@ -56,3 +56,53 @@ window.showImageModal = function (image) {
     const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
     imageModal.show();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Summernote for legal pages
+    $('textarea.summernote').summernote({
+        height: 300,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'strikethrough', 'clear']],
+            ['fontname', ['fontname']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+        ]
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Init Summernote only when modal opens
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('shown.bs.modal', () => {
+            $(modal).find('textarea.summernote').each(function () {
+                if (!$(this).next().hasClass('note-editor')) {
+                    $(this).summernote({
+                        height: 50,
+                        toolbar: [
+                            ['style', ['style']],
+                            ['font', ['bold', 'italic', 'underline',
+                                'strikethrough', 'clear'
+                            ]],
+                            ['fontname', ['fontname']],
+                            ['fontsize', ['fontsize']],
+                            ['color', ['color']],
+                            ['para', ['ul', 'ol', 'paragraph']],
+                            ['table', ['table']],
+                            ['insert', ['link', 'picture', 'video']],
+                            ['view', ['fullscreen', 'codeview', 'help']]
+                        ]
+                    });
+                }
+            });
+        });
+
+        modal.addEventListener('hidden.bs.modal', () => {
+            $(modal).find('textarea.summernote').summernote('destroy');
+        });
+    });
+});
